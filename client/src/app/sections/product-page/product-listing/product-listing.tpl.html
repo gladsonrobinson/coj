@@ -1,0 +1,26 @@
+<form ng-submit="productListCtrl.onAddToCart()" class="preliminary-qn-form" name="productListForm" novalidate>
+    <div class="row">
+        <div class="form-group col-md-3">
+            <label for="customer">Customer</label>
+            <select required class="form-control" id="customer" ng-options="customerList as customerList.cst_name for customerList in productListCtrl.productFormData.customer_list" ng-model="productListCtrl.model.customer"></select>
+        </div>
+        <div class="form-group col-md-4">
+            <label for="add-type">Ad Type</label>
+            <select required class="form-control" id="customer" ng-options="adTypeList as adTypeList.ad_name for adTypeList in productListCtrl.productFormData.ad_type_list" ng-model="productListCtrl.model.ad_type"></select>
+        </div>
+        <div class="form-group col-md-2">
+            <label for="quantity">Quantity</label>
+            <select required class="form-control" id="customer" ng-options="quantity for quantity in [1,2,3,4,5,6,7,8,9]" ng-model="productListCtrl.model.quantity"></select>
+        </div>
+        <div class="form-group col-md-3">
+            <button ng-disabled="productListForm.$invalid" type="submit" class="btn btn-default add-to-cart-butn">Add To Cart</button>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+          <ol>
+            <li ng-repeat="offer in productListCtrl.model.customer.avaialbel_offers" ng-bind="offer.offer_text"></li>
+          </ol>
+      </div>
+    </div>
+</form>

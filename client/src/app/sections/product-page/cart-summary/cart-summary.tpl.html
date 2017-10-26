@@ -1,0 +1,45 @@
+<div>
+<div class="border" ng-if="cartSummarytCtrl.cartItems.items.length > 0">
+  <div class="row">
+      <div class="col-md-12 col-lg-12">
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>Product</th>
+                      <th>No</th>
+                      <th>Price</th>
+                      <th class="total-price">Total Price</th>
+                      <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr ng-repeat="item in cartSummarytCtrl.cartItems.items">
+                      <td>{{item.customer.cst_name}} - {{item.ad_type.ad_name}}</td>
+                      <td>{{item.quantity}}</td>
+                      <td>{{item.ad_type.price | currency}}</td>
+                      <td>
+                          <div class="pull-right" ng-if="item.discount !=0">
+                            {{item.price_after_discount | currency}}
+                          </div>
+                          <div class="pull-right" ng-class="{'discount-applied' : item.discount !=0}">
+                            {{item.total_price | currency}}
+                          </div> 
+                      </td>
+                      <td><button class="close" ng-click="cartSummarytCtrl.removeCartItem($index)">&times;</button></a></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <div class="pull-right">
+                        Sum: {{cartSummarytCtrl.cartItems.grandTotal | currency}} 
+                      </div>
+                    </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>
+</div>

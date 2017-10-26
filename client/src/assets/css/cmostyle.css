@@ -1,0 +1,193 @@
+/**
+ * Main Style sheet for coj
+ *
+ * @project Name: coj
+ * @version: 1.0
+ * @author Name:  Gladson
+ */
+
+/**
+* ------------------------------------------------------------------------------------------------------------------
+* TYPOGRAPHY
+* ------------------------------------------------------------------------------------------------------------------
+*/
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'),
+       url('../fonts/open-sans-regular.woff2') format('woff2'),
+       url('../fonts/open-sans-regular.woff') format('woff');
+}
+body,body.coj-body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-variant: normal; 
+  font-weight: 400;
+  color: #606060;
+}
+
+.add-to-cart-butn {
+  margin-top: 20px;
+}
+
+.discount-applied {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 3px;
+}
+
+.table .total-price {
+   text-align: right;   
+}
+
+h4 {
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  color: #000;
+  margin-top: 0; 
+}
+.sub-heading{
+  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  color: #1d82c6;
+  margin-top: 10px; 
+  padding: 2px 0 2px 0 !important;
+}
+h5 {
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  color: #000;
+  margin-top: 0; 
+  margin-bottom: 0; 
+}
+hr{
+  margin-top: 0;  
+  margin-bottom: 10px;
+  border: 0;
+  border-top: 1px solid #ccc; 
+}
+
+/**
+* ---------------------------------------------------------------------------------------------------------------->
+* GLOBAL STYLES 
+* @desc: Styles which can be (have been) used application wide
+* ---------------------------------------------------------------------------------------------------------------->
+*/
+*{margin:0;padding:0}
+ul{margin-bottom:0;}
+ul li{list-style-type:none;}
+.block{display:block}
+.position-relative{position:relative;}
+.margin-top-5px{margin-top: 5px}
+.margin-top-10px{margin-top: 10px}
+.margin-top-15px{margin-top: 15px}
+.margin-top-20px{margin-top: 20px}
+.margin-top-25px{
+  margin-top: 25px;
+}
+
+.view-wrapper{  position: absolute; top: 93px;bottom: 30px;left:0;right: 0;overflow: auto;background-color:#ffffff;padding: 10px 0;} 
+.form-box{margin-bottom: 15px; padding-right: 10px; padding-left: 10px;}
+
+/**
+* ------------------------------------------------------------------------------------------------------------------
+* FOOTER
+* ------------------------------------------------------------------------------------------------------------------
+*/
+footer {position: absolute;bottom: 0;left:0;width: 100%;background: #d1d6e1;box-shadow: inset 0 1px 1px rgba(0,0,0,.075);}
+footer p{color:#666666;padding:4px 0 4px 0px;margin:0px;font-size:16px;}
+
+
+ ******************NEW NAVBAR******************
+
+.coj-nav .navbar-header > button{color:#fff; border:1px solid black; background-color:#3598db; }
+.coj-nav hr {color: #3598db;margin: 0;padding: 0;border: 0!important;height: 6px;background-color: #3598db;}
+.coj-nav .user{float:right!important; margin: 5px 0px 5px 0px;width: 57%;}
+.coj-nav .user img{width: 25px;float: right; margin:5px 0px 5px 10px;cursor: pointer;}
+.coj-nav .green-border{border-top: 5px solid #18b475; width: 90px;margin: -5px 105px;}
+.coj-nav .coj{color: #3598db; font-size: 21px;font-family: inherit; margin: 12px 0px 6px 0px;position: absolute;}
+
+
+.coj-container  {
+    margin: 0 auto;
+    padding: 20px; 
+    background-color: #fff; 
+    border: 1px solid #d1d1d1;
+}
+
+.main-wrapper{
+  padding: 15px 0px 15px 0px !important;
+}
+.coj-container-margin {
+  margin-top: 15px
+}
+
+.clear{
+  clear: both;
+}
+
+
+.border{
+  border: 1px ridge #333;
+  padding: 20px 0px;
+  margin-bottom: 20px;
+}
+
+button:focus {outline:0;}
+
+/*--------------static menu ---------------*/
+.menu-bar {
+  background-color: #dbe5f3;
+  padding: 0px 0px;
+}
+.nav-menu .menu-parent {
+  display: inline;
+  position: relative;
+}
+.nav-menu .menu-parent > a{
+  padding: 8px 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: #555;
+}
+.nav-menu .menu-parent > a:hover, .nav-menu .menu-parent.active > a{
+  background-color: #3498DB;
+  color: #fff;
+}
+.dropdown .nav-menu{
+    margin-bottom: 0px;
+}
+
+.nav-menu .menu-parent a{
+  text-decoration: none;
+}
+
+.menu-container .navbar {
+    background-image: none;
+    box-shadow: none;
+    border: none;
+    min-height: 34px;
+} 
+/*--------------static menu ---------------*/
+
+.width-limiter{
+    width: 1024px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1200px) {
+    .width-limiter{
+        width: 100%;
+        padding: 0px 0px 0px 15px;
+    }
+    .coj-nav .user img{
+        margin-right: 15px;
+    }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+  <!-- Place holder for CSS (load custom css files) -->
+  <!-- inject:app:css -->
+  <link rel="stylesheet" href="/src/assets/css/cmostyle.css">
+  <!-- endinject -->
+
+  <!-- Place holder for CSS (load 3rdparty css files) -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+  <!-- endinject -->
+  
+  <!-- Place holder for JS (load angular and 3rdparty files) -->
+  <!-- inject:head:js -->
+  <script src="/node_modules/angular/angular.min.js"></script>
+  <script src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+  <script src="/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+  <script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="/node_modules/ramda/dist/ramda.min.js"></script>
+  <script src="/node_modules/q/q.js"></script>
+  <!-- endinject -->
+
+  <title>Seek</title>
+</head>
+
+<body ng-app="cojApp" class="coj-body" ng-strict-di>
+  <div class="push-menu-container">
+    <div class="mp-pusher" id="mp-pusher">
+      <div class="coj-nav ">
+        <hr>
+        <div class="width-limiter clearfix">
+            <strong class="coj">CO JOB</strong>
+            <ul class="user">
+              <li><img src="src/assets/img/provider_details.png" />
+              </li>
+            </ul>      
+        </div>         
+        <div class="clearfix"></div>
+      </div>
+			
+      <div class="menu-container">
+				<div class="menu-bar">
+          <div class="dropdown width-limiter clearfix">
+            <ul class="nav-menu">
+              <li class="menu-parent" ui-sref-active="active" >
+                <a  ui-sref="productPage">Product</a>    
+              </li>
+            </ul>   
+          </div>
+        </div>
+      </div>
+
+    <div class="view-wrapper width-limiter">			  	
+        <div ui-view></div> 
+     </div>
+    <div class="clearfix"></div>
+    <show-script></show-script>
+    <footer>
+      <div class="width-limiter clearfix">
+         <p>Copyright 2017 Co Job All Rights Reserved</p>
+      </div>        
+     
+    </footer>
+  </div>
+  
+<!-- Place holder for application JS files  -->
+<!-- inject:js --> 
+<script src="src/app/app.constant.js"></script> 
+<script src="src/app/app.js"></script> 
+<script src="src/app/routes.js"></script> 
+<script src="src/app/sections/product-page/discount.factory.js"></script> 
+<script src="src/app/sections/product-page/index.js"></script> 
+<script src="src/app/sections/product-page/product.controller.js"></script> 
+<script src="src/app/sections/product-page/product.factory.js"></script> 
+<script src="src/app/sections/product-page/cart-summary/cart-summary.controller.js"></script> 
+<script src="src/app/sections/product-page/cart-summary/cart-summary.directive.js"></script> 
+<script src="src/app/sections/product-page/product-listing/product-listing.controller.js"></script> 
+<script src="src/app/sections/product-page/product-listing/product-listing.directive.js"></script> 
+<!-- endinject -->
+  
+</body>
+
+</html>
